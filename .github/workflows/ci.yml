@@ -61,6 +61,7 @@ jobs:
           profile: minimal
           toolchain: nightly
           override: true
+          components: rust-src
 
       - name: Cache set-up
         uses: Swatinem/rust-cache@v2
