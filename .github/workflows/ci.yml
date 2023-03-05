@@ -55,6 +55,10 @@ jobs:
       - name: Checkout sources
         uses: actions/checkout@v3
 
+      - name: Install gcc-msp430
+        run: |
+          sudo apt-get -y install gcc-msp430
+
       - name: Install nightly toolchain
         uses: actions-rs/toolchain@v1
         with:
