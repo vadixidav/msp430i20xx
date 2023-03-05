@@ -46,7 +46,7 @@ jobs:
         uses: actions-rs/clippy-check@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          args: --tests -- -D warnings --all-features
+          args: --tests --all-features -- -D warnings
 
   no_std:
     name: no_std
