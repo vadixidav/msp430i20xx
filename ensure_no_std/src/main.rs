@@ -1,6 +1,9 @@
 // ensure_no_std/src/main.rs
 #![no_std]
 #![no_main]
+#![feature(abi_msp430_interrupt)]
+
+use msp430_rt::{entry, interrupt};
 
 use core::panic::PanicInfo;
 
@@ -10,7 +13,11 @@ fn panic(_info: &PanicInfo) -> ! {
     loop {}
 }
 
-#[no_mangle]
-pub extern "C" fn _start() -> ! {
+#[entry]
+fn main() -> ! {
+    /* user code */
     loop {}
 }
+
+#[interrupt]
+fn DefaultHandler() {}
