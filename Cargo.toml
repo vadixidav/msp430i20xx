@@ -5,5 +5,4 @@ edition = "2021"
 
 [dependencies]
 msp430 = "0.4.0"
-msp430-rt = { version = "0.4.0", features = ["device"] }
 modular-bitfield = "0.11.2"

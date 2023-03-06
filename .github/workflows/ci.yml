@@ -55,9 +55,16 @@ jobs:
       - name: Checkout sources
         uses: actions/checkout@v3
 
-      - name: Install gcc-msp430
+      - name: Install msp430-elf-gcc
+        shell: bash
         run: |
-          sudo apt-get -y install gcc-msp430
+          curl -LO http://software-dl.ti.com/msp430/msp430_public_sw/mcu/msp430/MSPGCC/8_3_1_0/export/msp430-gcc-8.3.1.25_linux64.tar.bz2
+          tar xjf msp430-gcc-8.3.1.25_linux64.tar.bz2
+          echo "$GITHUB_WORKSPACE/msp430-gcc-8.3.1.25_linux64/bin" >> $GITHUB_PATH
+
+      - name: Check msp430-elf-gcc
+        shell: bash
+        run: msp430-elf-gcc --version
 
       - name: Install nightly toolchain
         uses: actions-rs/toolchain@v1

@@ -11,6 +11,7 @@ fn main() {
             .unwrap()
             .write_all(body)
             .unwrap();
+        println!("cargo:rerun-if-changed={name}");
     }
     println!("cargo:rustc-link-search={}", out.display());
 }

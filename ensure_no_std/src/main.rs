@@ -18,6 +18,3 @@ fn main() -> ! {
     /* user code */
     loop {}
 }
-
-#[interrupt]
-fn DefaultHandler() {}

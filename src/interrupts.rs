@@ -18,8 +18,8 @@ extern "msp430-interrupt" {
     fn P2Interrupt();
 }
 
-#[link_section = ".vector_table.interrupts"]
 #[no_mangle]
+#[link_section = ".vector_table.interrupts"]
 static __INTERRUPTS: [Vector; 15] = [
     Vector { reserved: 0 },
     Vector {

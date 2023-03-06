@@ -6,6 +6,7 @@ edition = "2021"
 
 [dependencies]
 msp430i20xx = { path = ".." }
+msp430 = "0.4.0"
 msp430-rt = { version = "0.4.0", features = ["device"] }
 
 [profile.dev]
