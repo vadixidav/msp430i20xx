@@ -74,7 +74,7 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: rustc
-          args: --target=msp430-none-elf -Zbuild-std=core --manifest-path=ensure_no_std/Cargo.toml
+          args: --target=msp430-none-elf -Zbuild-std=core --manifest-path=ensure_no_std/Cargo.toml -- -C link-arg=-nostartfiles -C link-arg=-Tlink.x
 
   tests:
     name: tests
