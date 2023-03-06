@@ -3,10 +3,9 @@
 #![no_main]
 #![feature(abi_msp430_interrupt)]
 
-mod interrupts;
-
 use core::panic::PanicInfo;
 use msp430_rt::entry;
+use msp430i20xx as _;
 
 /// This function is called on panic.
 #[panic_handler]
