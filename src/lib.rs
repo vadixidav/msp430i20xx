@@ -1,8 +1,6 @@
 #![no_std]
 #![feature(const_mut_refs, abi_msp430_interrupt)]
 
-mod interrupts;
-
 // #![allow(dead_code, clippy::return_self_not_must_use)]
 use modular_bitfield::prelude::*;
 
