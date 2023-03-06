@@ -4,5 +4,5 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-msp430 = "0.4.0"
+msp430 = "0.4.1"
 modular-bitfield = "0.11.2"
