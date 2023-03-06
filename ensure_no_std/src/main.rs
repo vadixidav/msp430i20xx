@@ -3,7 +3,7 @@
 #![no_main]
 #![feature(abi_msp430_interrupt)]
 
-use msp430_rt::{entry, interrupt};
+use msp430_rt::entry;
 
 use core::panic::PanicInfo;
 
